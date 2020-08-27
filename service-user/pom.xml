@@ -9,33 +9,20 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.saidbouig</groupId>
-	<artifactId>microservices</artifactId>
+	<artifactId>service-user</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>microservice-training</name>
-	<packaging>pom</packaging>
-	<description>Testing Knowledge on Architecting Microservices</description>
+	<name>service-user</name>
+	<description>User Management Service</description>
 
 	<properties>
 		<java.version>14</java.version>
 	</properties>
-	<modules>
-		<module>service-registration-discovery</module>
-		<module>service-gateway</module>
-		<module>service-user</module>
-	</modules>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-		<dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-dependencies</artifactId>
-			<version>Hoxton.SR6</version>
-			<type>pom</type>
-			<scope>import</scope>
-        </dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
