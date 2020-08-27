@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.saidbouig</groupId>
-	<artifactId>service-gateway</artifactId>
+	<artifactId>microservices</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>microservice-training</name>
 	<packaging>pom</packaging>
@@ -18,6 +18,10 @@
 	<properties>
 		<java.version>14</java.version>
 	</properties>
+	<modules>
+		<module>service-registration-discovery</module>
+		<module>service-gateway</module>
+	</modules>
 
 	<dependencies>
 		<dependency>
