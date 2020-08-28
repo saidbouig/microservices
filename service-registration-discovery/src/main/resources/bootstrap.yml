@@ -1,6 +1,9 @@
 spring:
   application:
-    name: eureka
+    name: service-registery-discovery
   cloud:
     config:
       enabled: false
+
+serviceUrl:
+  defaultZone: http://service-registery-discovery:8761/eureka/
