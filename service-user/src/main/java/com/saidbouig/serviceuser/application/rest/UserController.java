@@ -1,8 +1,8 @@
-package com.saidbouig.serviceuser.application;
+package com.saidbouig.serviceuser.application.rest;
 
 import com.saidbouig.serviceuser.domain.ResourceNotFoundException;
 import com.saidbouig.serviceuser.domain.User;
-import com.saidbouig.serviceuser.domain.UserService;
+import com.saidbouig.serviceuser.domain.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
