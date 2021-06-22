@@ -14,5 +14,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: Build the Docker image service-registration-discovery
+      run: docker build ./service-registration-discovery --file Dockerfile --tag my-image-name:$(date +%s)
+      
+    - uses: actions/checkout@v2
+    - name: Build the Docker image service-gateway
+      run: docker build ./service-gateway --file Dockerfile --tag my-image-name:$(date +%s)
+
+    - uses: actions/checkout@v2
+    - name: Build the Docker image service-user
+      run: docker build ./service-user --file Dockerfile --tag my-image-name:$(date +%s)
+
