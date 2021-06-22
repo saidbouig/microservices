@@ -56,15 +56,15 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", createdAt=" + createdAt +
-                ", createdBy='" + createdBy + '\'' +
-                ", updatedAt=" + updatedAt +
-                ", updatedby='" + updatedBy + '\'' +
-                '}';
+            "id=" + id +
+            ", firstName='" + firstName + '\'' +
+            ", lastName='" + lastName + '\'' +
+            ", email='" + email + '\'' +
+            ", createdAt=" + createdAt +
+            ", createdBy='" + createdBy + '\'' +
+            ", updatedAt=" + updatedAt +
+            ", updatedby='" + updatedBy + '\'' +
+            '}';
     }
 
 

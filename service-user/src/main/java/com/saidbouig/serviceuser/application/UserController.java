@@ -29,7 +29,7 @@ public class UserController {
     public ResponseEntity<User> getUsersById(@PathVariable(value = "id") Long userId) {
         try {
             User user =
-                    userService.getById(userId);
+                userService.getById(userId);
             return ResponseEntity.ok().body(user);
         } catch (ResourceNotFoundException exception) {
             return ResponseEntity.notFound().build();
@@ -43,7 +43,7 @@ public class UserController {
 
     @PutMapping("{id}")
     public ResponseEntity<User> updateUser(
-            @PathVariable(value = "id") Long userId, @Valid @RequestBody User userDetails) {
+        @PathVariable(value = "id") Long userId, @Valid @RequestBody User userDetails) {
         try {
             final User updatedUser = userService.update(userId, userDetails);
             return ResponseEntity.ok(updatedUser);
