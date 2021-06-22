@@ -1,4 +1,4 @@
-package com.saidbouig.serviceuser.infra;
+package com.saidbouig.serviceuser.infra.repository.jpa;
 
 import com.saidbouig.serviceuser.domain.User;
 import com.saidbouig.serviceuser.domain.UsersRepository;
