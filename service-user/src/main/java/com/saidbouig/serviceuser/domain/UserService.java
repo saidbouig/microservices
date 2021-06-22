@@ -15,8 +15,8 @@ public class UserService {
 
     public User getById(Long userId) throws ResourceNotFoundException {
         return usersRepository
-                .findById(userId)
-                .orElseThrow(() -> new ResourceNotFoundException("User not found on :: " + userId));
+            .findById(userId)
+            .orElseThrow(() -> new ResourceNotFoundException("User not found on :: " + userId));
     }
 
     public List<User> getAll() {
@@ -29,8 +29,8 @@ public class UserService {
 
     public User update(Long userId, User userDetails) throws ResourceNotFoundException {
         User user = usersRepository
-                .findById(userId)
-                .orElseThrow(() -> new ResourceNotFoundException("User not found on :: " + userId));
+            .findById(userId)
+            .orElseThrow(() -> new ResourceNotFoundException("User not found on :: " + userId));
 
         user.setEmail(userDetails.getEmail());
         user.setLastName(userDetails.getLastName());
@@ -42,7 +42,7 @@ public class UserService {
 
     public void delete(Long userId) throws ResourceNotFoundException {
         User user =
-                getById(userId);
+            getById(userId);
 
         usersRepository.delete(user);
     }
