@@ -1,4 +1,6 @@
-package com.saidbouig.serviceuser.domain;
+package com.saidbouig.serviceuser.domain.repository;
+
+import com.saidbouig.serviceuser.domain.User;
 
 import java.util.List;
 import java.util.Optional;

@@ -2,7 +2,7 @@ package com.saidbouig.serviceuser.domain.service;
 
 import com.saidbouig.serviceuser.domain.ResourceNotFoundException;
 import com.saidbouig.serviceuser.domain.User;
-import com.saidbouig.serviceuser.domain.UsersRepository;
+import com.saidbouig.serviceuser.domain.repository.UsersRepository;
 
 import java.util.Date;
 import java.util.List;

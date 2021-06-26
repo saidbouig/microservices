@@ -1,11 +1,12 @@
 package com.saidbouig.serviceuser.infra.repository.jpa;
 
 import com.saidbouig.serviceuser.domain.User;
-import com.saidbouig.serviceuser.domain.UsersRepository;
+import com.saidbouig.serviceuser.domain.repository.UsersRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Repository
 public class UsersJpaWrapperRepository implements UsersRepository {
@@ -18,22 +19,28 @@ public class UsersJpaWrapperRepository implements UsersRepository {
 
     @Override
     public List<User> findAll() {
-        return usersJpaRepository.findAll();
+        var userJpaEntities = usersJpaRepository.findAll();
+
+        return userJpaEntities.stream()
+            .map(UserJpaEntity::toUser)
+            .collect(Collectors.toList());
     }
 
     @Override
     public Optional<User> findById(Long userId) {
-        return usersJpaRepository.findById(userId);
+        var userEntity = usersJpaRepository.findById(userId);
+        return userEntity.map(UserJpaEntity::toUser);
     }
 
     @Override
     public User save(User user) {
-        return usersJpaRepository.save(user);
+        var savedUserEntity = usersJpaRepository.save(new UserJpaEntity(user));
+        return savedUserEntity.toUser();
     }
 
     @Override
     public void delete(User user) {
-        usersJpaRepository.delete(user);
+        usersJpaRepository.delete(new UserJpaEntity(user));
     }
 }
 
