@@ -2,7 +2,7 @@ FROM openjdk:14 as builder
 
 WORKDIR /app
 
-COPY target/service-registration-discovery-*.jar app.jar
+COPY ./target/service-registration-discovery-*.jar app.jar
 
 RUN java -Djarmode=layertools -jar app.jar extract
 
