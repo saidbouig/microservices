@@ -1,4 +1,4 @@
-name: Docker Image CI - service-gateway
+name: Docker Image CI - microservices
 
 on:
   push:
