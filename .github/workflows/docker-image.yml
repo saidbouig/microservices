@@ -1,0 +1,22 @@
+name: Docker Image CI - service-gateway
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image microservices
+      run: |
+        docker build service-gateway --file service-gateway/Dockerfile --tag service-gateway:$(date +%s)
+        docker build service-registration-discovery --file service-registration-discovery/Dockerfile --tag service-registration-discovery:$(date +%s)
+        docker build service-auth --file service-auth/Dockerfile --tag service-auth:$(date +%s)
+        docker build service-user --file service-user/Dockerfile --tag service-user:$(date +%s)
